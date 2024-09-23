@@ -29,7 +29,7 @@ cd ticket-management   //Navigate to the project directory:
 npm install    //Install the required dependencies:
 
 mongod        //Ensure MongoDB is running and start the server:
-npm start
+nodemon app.js   // to start the server
 
 http://localhost:4040/listing Access the application in your browser:
 
