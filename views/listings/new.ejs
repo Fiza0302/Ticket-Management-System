@@ -1,0 +1,38 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <h3>Raise a Ticket</h3>
+    <form action="/listing" method="POST" novalidate class="needs-validation">
+    <div>
+        <lable for="title" class="form-lable" >Title</lable>
+        <input type="text" name="listing[title]" placeholder="Enter title" class="form-control" required>
+        <div class="invalid-feedback">Enter title</div>
+    </div>
+    <br>
+    <div>
+        <label for="description" class="form-lable">Description</label>
+        <textarea name="listing[description]" placeholder="Enter description" class="form-control" required></textarea> 
+        <div class="invalid-feedback">Enter description</div>
+    </div>
+    <br> 
+    <div>
+        <label for="date" class="form-lable">Date</label>
+        <input type="date" name="listing[date]" placeholder="DD/MM/YYYY" class="form-control" required>
+        <div class="invalid-feedback">Date</div>
+    </div>
+    <br>
+    <div>
+        <label for="time" class="form-lable">Time</label>
+        <input type="time" name="listing[time]" placeholder="Time 00:00" class="form-control" required>
+        <div class="invalid-feedback">Enter time</div>
+    </div>
+    <br>
+    <div>
+        <label for="duration" class="form-lable">Duration</label>
+        <input type="number" name="listing[duration]" placeholder="Duration" class="form-control" required>
+        <div class="invalid-feedback">Enter duration</div>
+    </div>
+    <br><br>
+    <button class="btn btn-dark btn-add">submit</button>
+    </form>
+    
+</body>

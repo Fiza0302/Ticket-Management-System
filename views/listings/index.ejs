@@ -1,0 +1,26 @@
+<%- layout("/layouts/boilerplate") %>
+
+    <h3>All listings</h3>
+    <!--<form action="/listing/new" method="GET">
+        <button>Raise your ticket</button>
+    </form> -->
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+        <% for(let listing of allListings) {%>
+            <div class="card cards" style="width: 20rem;">
+                
+                <div class="card-body">
+                    <h5 class="card-title show-title"><a href="/listing/<%= listing.id %>"><%=listing.title%></a></h5>
+                    <hr>
+                  <p class="card-text">
+                    <%=listing.description%> <br>  
+                      
+                    <%=listing.time%> <br>
+                    <%=listing.duration%>
+                  </p>
+                </div>
+              </div>
+              <% } %>        
+    </div>
+    
+    
+
